@@ -6,56 +6,56 @@ Abaixo estão listadas as violações encontradas no código original da classe 
 
 ### 1. Only One Level of Indentation per Method *(Apenas um nível de indentação por método)*
 
-* ❄ O método `calcDesc()` possui múltiplos níveis aninhados (`if` dentro de `if`).
-* ❄ O método `genRpt()` mistura laço `for` com chamadas de métodos e concatenação.
+*  O método `calcDesc()` possui múltiplos níveis aninhados (`if` dentro de `if`).
+*  O método `genRpt()` mistura laço `for` com chamadas de métodos e concatenação.
 
 ---
 
 ### 2. Don't Use the ELSE Keyword *(Não use a palavra-chave ELSE)*
 
-* ❄ O `else` é utilizado no método `calcDesc()`, o que pode ser evitado com retornos antecipados.
+*  O `else` é utilizado no método `calcDesc()`, o que pode ser evitado com retornos antecipados.
 
 ---
 
 ### 3. Wrap All Primitives and Strings *(Encapsule todos os primitivos e Strings)*
 
-* ❄ Os atributos `double valTot`, `boolean conf`, `String cli` e `List<String> itns` são tipos primitivos ou Strings diretos.
+*  Os atributos `double valTot`, `boolean conf`, `String cli` e `List<String> itns` são tipos primitivos ou Strings diretos.
 
 ---
 
 ### 4. First Class Collections *(Coleções como objetos de primeira classe)*
 
-* ❄ A coleção `List<String> itns` deveria estar encapsulada em uma classe como `ItensVenda` para conter a lógica associada.
+*  A coleção `List<String> itns` deveria estar encapsulada em uma classe como `ItensVenda` para conter a lógica associada.
 
 ---
 
 ### 5. One Dot per Line *(Um ponto por linha)*
 
-* ❄ O acesso `not.send(...)` mostra acoplamento direto com métodos internos de um objeto composto.
+*  O acesso `not.send(...)` mostra acoplamento direto com métodos internos de um objeto composto.
 
 ---
 
 ### 6. Don't Abbreviate *(Não abrevie)*
 
-* ❄ Abreviações excessivas como `valTot`, `cli`, `conf`, `itns`, `not`, `itm` comprometem a clareza do código.
+*  Abreviações excessivas como `valTot`, `cli`, `conf`, `itns`, `not`, `itm` comprometem a clareza do código.
 
 ---
 
 ### 7. Keep All Entities Small *(Mantenha todas as classes pequenas)*
 
-* ❄ A classe `Venda` tem muitas responsabilidades: adiciona itens, calcula desconto, gera relatório, confirma venda e envia notificação.
+*  A classe `Venda` tem muitas responsabilidades: adiciona itens, calcula desconto, gera relatório, confirma venda e envia notificação.
 
 ---
 
 ### 8. No Classes with More Than Two Instance Variables *(No máximo duas variáveis por classe)*
 
-* ❄ A classe `Venda` possui **cinco atributos**, ultrapassando o limite recomendado.
+*  A classe `Venda` possui **cinco atributos**, ultrapassando o limite recomendado.
 
 ---
 
 ### 9. Use Getters/Setters with Caution *(Use getters/setters com cautela)*
 
-* ❄ Getter e setter diretos para `conf`. Além disso, o setter possui lógica acoplada (`not.send(...)`).
+*  Getter e setter diretos para `conf`. Além disso, o setter possui lógica acoplada (`not.send(...)`).
 
 ---
 
