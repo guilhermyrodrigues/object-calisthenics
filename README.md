@@ -121,4 +121,3 @@ Essas violações comprometem a manutenção, reutilização e clareza do códig
 
 ---
 
-A refatoração torna o sistema mais coeso, legível e aderente a boas práticas orientadas a objetos, facilitando manutenção e extensão futuras.
